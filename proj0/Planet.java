@@ -1,6 +1,10 @@
+import edu.princeton.cs.algs4.*;
+
 /**
  * Created by zhangjinrong on 2018/3/14.
  */
+
+
 public class Planet {
 
     public double xxPos;
@@ -66,14 +70,14 @@ public class Planet {
         return F;
     }
     public void update(double time,double xforce,double yforce){
-//        System.out.println(xxPos+":"+xxVel+":"+yyPos+":"+yyVel);
         double xAcc=xforce/mass;
         double yAcc=yforce/mass;
         xxVel=xxVel+xAcc*time;
         yyVel=yyVel+yAcc*time;
         xxPos=xxPos+xxVel*time;
         yyPos=yyPos+yyVel*time;
-//        System.out.println(xxPos+":"+xxVel+":"+yyPos+":"+yyVel);
     }
-
+    public void draw(){
+        StdDraw.picture(xxPos,yyPos,"./images/"+imgFileName);
+    }
 }
