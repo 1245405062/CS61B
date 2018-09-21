@@ -1,7 +1,6 @@
 public class NBody{
   public static double readRadius(String address){
     In in = new In(address);
-    in.readInt();
     double first = in.readDouble();
     return in.readDouble();
   }
